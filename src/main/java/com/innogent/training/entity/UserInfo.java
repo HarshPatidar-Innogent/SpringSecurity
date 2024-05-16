@@ -1,26 +1,23 @@
 package com.innogent.training.entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@Table(name = "userManagement")
 @Entity
-@Builder
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class UserInfo {
 	@Id
-	private String userId;
-	private String userName;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String name;
+	private String email;
 	private String password;
-	private boolean active;
 	private String roles;
-	private int age;
-	private String homeAddress;
 }
