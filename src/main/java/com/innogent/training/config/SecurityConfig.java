@@ -31,6 +31,18 @@ public class SecurityConfig {
 		return new UserInfoUserDetailsService();
 	}
 
+//	@Bean
+//	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+//		return http.csrf(csrf -> csrf.disable()).authorizeHttpRequests(authorize -> authorize.anyRequest().permitAll())
+//				.formLogin(form -> form.loginPage("/user/login").loginProcessingUrl("/user/authenticate"))
+////				.authorizeHttpRequests(requests -> requests.requestMatchers("/user/authenticate").permitAll())
+////				.authorizeHttpRequests(requests -> requests.requestMatchers("/user/**").authenticated())
+////				.sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+////				.authenticationProvider(authenticationProvider())
+////				.addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class)
+//				.build();
+//	}
+
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		return http.csrf(csrf -> csrf.disable())
