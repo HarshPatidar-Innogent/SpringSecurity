@@ -1,5 +1,5 @@
 //package com.innogent.training.runner;
-//
+//Testing for git pull and push from idea
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.boot.CommandLineRunner;
 //import org.springframework.stereotype.Component;
